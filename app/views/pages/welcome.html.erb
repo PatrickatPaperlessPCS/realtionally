@@ -1,0 +1,11 @@
+<div class="center-block all_center horizontal_center">
+	<h1>Let's get some more selling done...</h1>
+<hr>
+<% if user_signed_in? %>
+  <%= render :partial => "edit" %>
+<% end %>
+
+<% unless user_signed_in? %>
+  <%= render :partial => "sign_on" %>
+<% end %>
+</div>

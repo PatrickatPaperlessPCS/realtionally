@@ -1,0 +1,15 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.all_center {
+	text-align: center;
+	position: relative;
+  	top: 50%;
+}
+
+.horizontal_center {
+    display: block;
+    margin: auto;
+    width: 50%;
+}

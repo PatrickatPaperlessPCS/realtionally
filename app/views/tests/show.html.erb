@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alpha:</strong>
+  <%= @test.alpha %>
+</p>
+
+<p>
+  <strong>Beta:</strong>
+  <%= @test.beta %>
+</p>
+
+<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'Back', tests_path %>

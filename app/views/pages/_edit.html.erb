@@ -1,0 +1,21 @@
+<h4>You're signed in as:</h4>
+<b><%= current_user.name %></b><br>
+You work at: <b><%= current_user.company_name %></b><br>
+Your cell number is <b><%= current_user.cell %></b><br>
+You can also be reached at<b> <%= current_user.phone2 %></b><br>
+and your email address is: <b><%= current_user.email %></b>
+<br><br>
+You use: <b><%= current_user.crm %></b> for your CRM<br>
+Your CRM's Username is: <b><%= current_user.un %><br></b>
+Your CRM Password is: <b>**********</b> 
+<br><br>
+See a change that needs to be made?<br>
+<%= link_to "Update your account details", edit_user_registration_path %></br>
+
+<hr>
+<H2>To enter log a new event call or text 555-555-1234</H2>
+<hr>
+<h4>To have an error fixed, <a href="mailto:notifications@relationally.net?Subject=Support%20Request" target="_top">email us at notifications@relationally.net</a></h4>
+<h4>For account, billing, or other issues, <a href="mailto:support@relationally.net?Subject=Support%20Request" target="_top">email us at support@relationally.net</a></h4>
+<hr>
+<%= button_to "Log Out", destroy_user_session_path,  :method=>'delete' %>
