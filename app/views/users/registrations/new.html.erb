@@ -1,4 +1,15 @@
-<h2>Sign up</h2>
+<body class="subdued">
+</br>
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+      <div><center><%= image_tag("black-blue_logo.png", width: '200', height: '75') %></center>
+<center>
+  
+
+<h2>Create a new account</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -47,3 +58,20 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</center>
+  <hr> 
+      <div>
+          <center>Having trouble?<br>  Reach out to us at <a href="mailto:support@relationally.net">support@relationally.net</a></center>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</body>
+
+</div>
+<br>
+<div class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+    50% Complete 
+  </div>
+</div>

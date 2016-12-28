@@ -1,4 +1,13 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<body class="subdued">
+</br>
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+      <div><center><%= image_tag("black-blue_logo.png", width: '200', height: '75') %></center>
+<center>
+<h2>Edit your profile</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>

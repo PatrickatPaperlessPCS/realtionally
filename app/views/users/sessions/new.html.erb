@@ -1,3 +1,13 @@
+<body class="subdued">
+</br>
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+      <div><center><%= image_tag("black-blue_logo.png", width: '200', height: '75') %></center>
+<center>
+  
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -24,3 +34,12 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+
+</center>
+  <hr> 
+      <div>
+          <center>Having trouble?<br>  Reach out to us at <a href="mailto:support@relationally.net">support@relationally.net</a></center>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</body>

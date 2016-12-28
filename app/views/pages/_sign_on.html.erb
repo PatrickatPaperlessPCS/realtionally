@@ -1,2 +1,6 @@
-<%= link_to "Sign In", new_user_session_path %><br>
-<%= link_to "Sign Up", new_user_registration_path %>
+
+<%= button_to "Sign In", new_user_session_path, :class => 'btn btn-large btn-inverse text-center', :method => :get  %>
+
+<br>
+Not a member?
+<%= button_to "Sign Up", new_user_registration_path, :class => 'btn btn-large btn-primary text-center ', :method => :get  %>

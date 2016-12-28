@@ -16,7 +16,8 @@ See a change that needs to be made?<br>
 
 <hr>
 <% if current_user.admin == true %>
- <%= link_to "admin panel", admin_console_list_path %>
+ <%= link_to "Go to the Admin Panel", admin_console_list_path %>
+ <br><br>
 <% else %>
 <H2>To enter log a new event call or text 555-555-1234</H2>
 <hr>
@@ -24,4 +25,4 @@ See a change that needs to be made?<br>
 <h4>For account, billing, or other issues, <a href="mailto:support@relationally.net?Subject=Support%20Request" target="_top">email us at support@relationally.net</a></h4>
 <hr>
  <% end %>
-<%= button_to "Log Out", destroy_user_session_path,  :method=>'delete' %>
+<%= button_to 'Sign Out', destroy_user_session_path,  :method=>'delete', :class => 'btn btn-large btn-warning '%>
