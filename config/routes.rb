@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :admins#, controllers: { registrations: "registrations"}
+
   get 'admin_console/list'
 
   # resources :tests
   resources :charges
   get 'pages/welcome'
   get 'pages/user_list'
-  
+  get 'pages/dashboard'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

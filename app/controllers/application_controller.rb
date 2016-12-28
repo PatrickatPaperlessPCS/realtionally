@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
 
 def after_sign_in_path_for(user)
-  pages_welcome_path
+  pages_dashboard_path
 end
    protected
 

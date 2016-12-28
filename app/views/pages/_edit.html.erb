@@ -1,3 +1,5 @@
+
+
 <h4>You're signed in as:</h4>
 <b><%= current_user.name %></b><br>
 You work at: <b><%= current_user.company_name %></b><br>
@@ -13,9 +15,13 @@ See a change that needs to be made?<br>
 <%= link_to "Update your account details", edit_user_registration_path %></br>
 
 <hr>
+<% if current_user.admin == true %>
+ <%= link_to "admin panel", admin_console_list_path %>
+<% else %>
 <H2>To enter log a new event call or text 555-555-1234</H2>
 <hr>
 <h4>To have an error fixed, <a href="mailto:notifications@relationally.net?Subject=Support%20Request" target="_top">email us at notifications@relationally.net</a></h4>
 <h4>For account, billing, or other issues, <a href="mailto:support@relationally.net?Subject=Support%20Request" target="_top">email us at support@relationally.net</a></h4>
 <hr>
+ <% end %>
 <%= button_to "Log Out", destroy_user_session_path,  :method=>'delete' %>
