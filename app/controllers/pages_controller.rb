@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
+before_action :authenticate_user!, :except => [:welcome]
 
-	before_action :authenticate_user!, :except => [:welcome]
   def welcome
   end
 
@@ -14,12 +14,6 @@ class PagesController < ApplicationController
   	# end
   end
 
-  def user_list
-  	unless 
-  	 current_user.admin == true
-  		redirect_to pages_dashboard_path
-  	else	
-  	@users = Users.all
-  	end
-  end
+
+
 end

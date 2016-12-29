@@ -5,9 +5,9 @@
     <div class="modal-content">
 
       <div class="modal-body">
-      <div><center><%= image_tag("black-blue_logo.png", width: '200', height: '75') %></center>
+      <div><center><%= image_tag("RelationallyLG.png", width: '399', height: '75') %></center>
 <center>
-<h2>Edit your profile</h2>
+<h3>Editing your profile</h3>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -17,41 +17,35 @@
     <%= f.text_field :name, autofocus: true %>
   </div>
   <div class="field">
-    Your Company Name:<br />
-    <%= f.text_field :company_name %>
+    Your Company Name:    <%= f.text_field :company_name %>
   </div>
     <div class="field">
-    Your CRM System:<br />
-    <%= f.text_field :crm %>
+    Your CRM System:    <%= f.text_field :crm %>
       </div>
         <div class="field">
-    Your CRM Username:<br />
-    <%= f.text_field :un %>
+    Your CRM Username:  <%= f.text_field :un %>
       </div>
         <div class="field">
-    Your CRM Password:<br />
-    <%= f.text_field :pw %>
+    Your CRM Password:    <%= f.text_field :pw %>
       </div>
     <div class="field">
-    Your Cell Phone Number:<br />
-    <%= f.telephone_field :cell %>
+    Your Cell Phone Number:    <%= f.telephone_field :cell %>
   </div>
     <div class="field">
-    A secondary phone: <sub>(optional)</sub><br />
-    <%= f.telephone_field :phone2 %>
+    A secondary phone: <i>(optional)</i>    <%= f.telephone_field :phone2 %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.label :email %>    <%= f.email_field :email, autofocus: true %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
-
+<div class="standout">
+  <i>Only complete this section to change your Realationally password</i>
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password %> <br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
@@ -63,12 +57,14 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
+</div>
+<div class="toppadding5">
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+    <%= f.label :current_password %> <%= f.password_field :current_password, autocomplete: "off" %>
+    <br><i>(enter your current password to confirm your profile changes)</i>
+    
   </div>
-
+</div>
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
