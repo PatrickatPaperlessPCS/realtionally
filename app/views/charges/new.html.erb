@@ -15,22 +15,24 @@
   <div>         
       <div style="text-align: center;">
         <h4>Almost there!</h4>
-        <p>Now help us keep the lights on..  Unlimited use of Relationally.net is just $49 per month!
 
      </h4>
+        <h3> You're about to start your free week!</h3><br>
+        <p>After that, unlimited use of Relationally.net is just $49 per month!
+
         <p style="padding-top: 10px;"> There’s <u>no risk</u> and you can cancel anytime with a single click from your dashboard.</p><br>
       </div><center>
       <%= form_tag charges_path do %>
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Relationally Subscription"
-          data-amount="2999"
+          data-amount="3900"
           ></script>
           <% end %></center>
   </div>   
   <hr> 
       <div>
-          <center>Having trouble?<br>  Reach out to us at <a href="mailto:support@patientphotos.net">support@dentalimager.com</a></center>
+          <center>Having trouble?<br>  Reach out to us at <a href="mailto:support@relationally.net">support@relationally.net</a></center>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
