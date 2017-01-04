@@ -14,7 +14,6 @@ class UserMailer < ApplicationMailer
 			mail(
 		  :subject => 'Important information from Relationally.net' ,
 		  :to => @user.email , 
-		  :bcc  => 'patrick@relationally.net' ,
 		  :track_opens => 'true'
 			)
 	end
