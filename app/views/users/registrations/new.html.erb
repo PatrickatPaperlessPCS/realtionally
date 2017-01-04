@@ -15,28 +15,29 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    Your Name:<br />
-    <%= f.text_field :name, autofocus: true %>
+    Your Name:    <%= f.text_field :name, autofocus: true %>
   </div>
   <div class="field">
-    Your Company Name:<br />
-    <%= f.text_field :company_name %>
+    Your Company Name:    <%= f.text_field :company_name %>
   </div>
     <div class="field">
-    Your CRM System:<br />
-    <%= f.text_field :crm %>
+    Your CRM System:    <%= f.text_field :crm %>
+      </div>
+        <div class="field">
+    Your CRM Username:  <%= f.text_field :un %>
+      </div>
+        <div class="field">
+    Your CRM Password:    <%= f.text_field :pw %>
+      </div>
+    <div class="field">
+    Your Cell Phone Number:    <%= f.telephone_field :cell %>
   </div>
     <div class="field">
-    Your Cell Phone Number:<br />
-    <%= f.telephone_field :cell %>
+    A secondary phone: <i>(optional)</i>    <%= f.telephone_field :phone2 %>
   </div>
-    <div class="field">
-    A secondary phone: <sub>(optional)</sub><br />
-    <%= f.telephone_field :phone2 %>
-  </div>
+
   <div class="field">
-    Email<br />
-    <%= f.email_field :email %>
+    Your email address <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">

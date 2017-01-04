@@ -4,5 +4,16 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable
 
-         validates :name, :company_name, :cell, :crm, presence: true 
+         validates :name, :company_name, :cell, :crm, :un, :pw, presence: true 
+
+  after_create :send_sign_up_email
+
+  def send_sign_up_email
+	UserMailer.sign_up(id).deliver_later
+  end
+
+
+  # def send_paid_email
+  # 	UserMailer.paid(id).deliver_later
+  # end
 end

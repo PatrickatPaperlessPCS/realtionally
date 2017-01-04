@@ -15,7 +15,8 @@ def create
 
 	  current_user.paid = true
 	  current_user.save!
-	  
+	  UserMailer.email(current_user).deliver_later
+	  UserMailer.paid(current_user).deliver_later
 	  redirect_to root_path
 
 	rescue Stripe::CardError => e

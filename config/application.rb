@@ -22,5 +22,7 @@ module Relationallyapp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.action_mailer.delivery_method = :postmark
+    config.action_mailer.postmark_settings = { :api_token => "938f6244-8790-45dc-a5ff-40ec0c6c427c" }
   end
 end
