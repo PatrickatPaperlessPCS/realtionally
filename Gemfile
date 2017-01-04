@@ -27,6 +27,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'stripe'
 gem "figaro"
 gem 'postmark-rails'
+gem 'unicorn'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -39,7 +40,11 @@ gem 'postmark-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'better_errors'
+  gem 'capistrano-rails'
+  gem "capistrano", "~> 3.4"
+  gem 'capistrano3-unicorn'
+  gem 'capistrano-figaro'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
