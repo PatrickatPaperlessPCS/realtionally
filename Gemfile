@@ -41,10 +41,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'better_errors'
-  gem 'capistrano-rails'
+  gem 'capistrano-rails', '~> 1.2'
   gem "capistrano", "~> 3.4"
   gem 'capistrano3-unicorn'
   gem 'capistrano-figaro'
+  gem 'capistrano-rbenv', '~> 2.0'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

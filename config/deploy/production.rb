@@ -7,7 +7,8 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-
+server '45.55.156.113', user: 'deploy', roles: %w{app db web}#, keys: '~/.ssh/id_rsa.pub'
+set :rails_env, 'production'
 
 # role-based syntax
 # ==================
