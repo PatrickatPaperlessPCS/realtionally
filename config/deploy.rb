@@ -10,7 +10,7 @@ set :repo_url, 'git@github.com:PatrickatPaperlessPCS/realtionally.git'
  set :deploy_to, 'app/relationally'
 
 # Default value for :scm is :git
- set :scm, :git
+ # set :scm, :git
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
