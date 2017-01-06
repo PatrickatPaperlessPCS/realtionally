@@ -4,7 +4,7 @@ working_directory "/home/deploy/app/relationally/current"
 
 # Unicorn PID file location
 # pid "/path/to/pids/unicorn.pid"
-pid "/home/deploy/app/relationally/pids/unicorn.pid"
+pid "/home/deploy/app/relationally/current/tmp/pids/unicorn.pid"
 
 # Path to logs
 # stderr_path "/path/to/log/unicorn.log"

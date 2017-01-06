@@ -21,7 +21,7 @@ set :repo_url, 'git@github.com:PatrickatPaperlessPCS/realtionally.git'
 set :log_level, :debug
 # Default value for :pty is false
 # set :pty, true
-set :unicorn_pid, 'app/relationally/pids/unicorn.pid'
+# set :unicorn_pid, 'app/relationally/pids/unicorn.pid'
 # Default value for :linked_files is []
 # append :linked_files, 'config/database.yml', 'config/secrets.yml'
 set :normalize_asset_timestamps, %w{public/images public/javascripts public/stylesheets}
