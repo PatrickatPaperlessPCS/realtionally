@@ -23,7 +23,7 @@ set :log_level, :debug
 # set :pty, true
 # set :unicorn_pid, 'app/relationally/pids/unicorn.pid'
 # Default value for :linked_files is []
-# append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/application.yml' #, 'config/secrets.yml'
 set :normalize_asset_timestamps, %w{public/images public/javascripts public/stylesheets}
 
 # Default value for linked_dirs is []
@@ -51,3 +51,22 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
+
+namespace :figaro do
+  desc "SCP transfer figaro configuration to the shared folder"
+  task :setup do
+    on roles(:app) do
+      upload! "config/application.yml", "#{shared_path}/config/application.yml", via: :scp
+    end
+  end
+
+  desc "Symlink application.yml to the release path"
+  task :symlink do
+    on roles(:app) do
+      execute "ln -sf #{shared_path}/config/application.yml #{current_path}/config/application.yml"
+    end
+  end
+end
+after "deploy:started", "figaro:setup"
+after "deploy:symlink:release", "figaro:symlink"
