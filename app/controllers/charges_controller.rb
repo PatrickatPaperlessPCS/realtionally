@@ -8,7 +8,7 @@ def create
 
 	  customer = Stripe::Customer.create(
 		  :source => token, # obtained from Stripe.js
-		  :plan => "39",
+		  :plan => "49",
 		  :email => current_user.email,
 		  #:coupon => current_user.referall
 	  	)
