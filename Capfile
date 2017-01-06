@@ -1,7 +1,7 @@
 # Load DSL and set up stages
 require 'capistrano/setup'
 require 'capistrano/deploy'
-
+require 'capistrano3/unicorn'
 require 'capistrano/bundler'
 require 'capistrano/rails'
 require "capistrano/scm/git"
