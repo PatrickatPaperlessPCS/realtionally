@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: relationallyapp_production
-  username: relationallyapp
-  password: <%= ENV['RELATIONALLYAPP_DATABASE_PASSWORD'] %>
+  username: deploy
+  password: Relationally2016
