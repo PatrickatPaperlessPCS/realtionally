@@ -36,7 +36,6 @@ set :normalize_asset_timestamps, %w{public/images public/javascripts public/styl
 # set :keep_releases, 5
 set :linked_dirs, fetch(:linked_dirs, []).
 push(
-  'bin',
   'log',
   'tmp/pids',
   'tmp/cache',
@@ -48,10 +47,9 @@ push(
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:restart'
+    invoke 'unicorn:reload'
   end
 end
-
 
 namespace :figaro do
   desc "SCP transfer figaro configuration to the shared folder"
