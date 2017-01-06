@@ -34,3 +34,13 @@ set :normalize_asset_timestamps, %w{public/images public/javascripts public/styl
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+set :linked_dirs, fetch(:linked_dirs, []).
+push(
+  'bin',
+  'log',
+  'tmp/pids',
+  'tmp/cache',
+  'tmp/sockets',
+  'vendor/bundle',
+  'public/system'
+)

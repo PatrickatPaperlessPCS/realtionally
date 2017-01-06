@@ -1,16 +1,16 @@
 # Set the working application directory
 # working_directory "/path/to/your/app"
-working_directory "app/relationally/current"
+working_directory "/home/deploy/app/relationally/current"
 
 # Unicorn PID file location
 # pid "/path/to/pids/unicorn.pid"
-pid "app/relationally/pids/unicorn.pid"
+pid "/home/deploy/app/relationally/pids/unicorn.pid"
 
 # Path to logs
 # stderr_path "/path/to/log/unicorn.log"
 # stdout_path "/path/to/log/unicorn.log"
-stderr_path "app/relationally/current/log/unicorn.log"
-stdout_path "app/relationally/current/log/unicorn.log"
+stderr_path "/home/deploy/app/relationally/current/log/unicorn.log"
+stdout_path "/home/deploy/app/relationally/current/log/unicorn.log"
 
 # Unicorn socket
 # listen "/tmp/unicorn.[app name].sock"
