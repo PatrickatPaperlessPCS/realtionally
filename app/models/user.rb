@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :timeoutable
 
          validates :name, :company_name, :cell, :crm, :un, :pw, presence: true 
-
+         validates :honeypot, presence: false 
   after_create :send_sign_up_email
 
   def send_sign_up_email

@@ -28,6 +28,7 @@ gem 'stripe'
 gem "figaro"
 gem 'postmark-rails'
 gem 'unicorn'
+gem 'invisible_captcha'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
