@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   end
 
 
+
   # def send_paid_email
   # 	UserMailer.paid(id).deliver_later
   # end

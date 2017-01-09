@@ -21,7 +21,7 @@
     Your Company Name:    <%= f.text_field :company_name %>
   </div>
     <div class="field">
-    Your CRM System:    <%= f.text_field :crm %>
+    Your CRM System:    <%= f.select :crm, [ 'Salesforce', 'Microsoft Dynamics', 'Sugar CRM', 'Zoho', 'Oracle Sales Cloud', 'Base', 'Pipedrive', 'Other' ], :prompt => 'Select One' %>
       </div>
         <div class="field">
     Your CRM Username:  <%= f.text_field :un %>
